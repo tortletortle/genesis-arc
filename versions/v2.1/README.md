@@ -23,4 +23,4 @@ Each skill has a fixed 16-bit metadata allowance. A raw map is 8 x 3 = 24 bits. 
 
 V2.1 keeps the V1.9 inference and utility-based admission/eviction policy fixed. It changes only the memory representation and capacity budget. Codecs are lossless; the simulator decodes maps before inference, so the experiment does not measure compute/latency savings.
 
-See [V2.1 report](V2.1_REPORT.md) and `results_10/`, `results_20/` for full data.
+See [V2.1 report](V2.1_REPORT.md) for the main results and limitations. The accompanying research archive contains the raw checkpoint CSVs, memory traces, summaries and paired bootstrap tables; the repository contains the executable source and test suite.
