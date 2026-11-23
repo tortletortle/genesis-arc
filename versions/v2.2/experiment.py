@@ -247,7 +247,8 @@ def selftest():
     decoded = roundtrip(keys, fit.dictionary, fit.encodings)
     assert decoded == {k: k for k in keys}
     assert fit.bits <= META_BITS * len(keys) + RAW_BITS * len(keys)
-    assert len(fit_dictionary(keys, pair_lookahead=False).dictionary) == 0
+    # The dedicated unit test checks no-pair ablation on the controlled benchmark;
+    # arbitrary random maps may have useful self-powers.
     held = tuple(map(int, rng.permutation(N)))
     assert held not in keys
     before = fit.bits
