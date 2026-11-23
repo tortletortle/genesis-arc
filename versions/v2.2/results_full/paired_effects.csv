@@ -1,0 +1,13 @@
+noise,metric,n_seeds,mean,ci_low,ci_high
+0.05,bits_saved_vs_raw,16,371.875,368.0,375.0
+0.05,bits_saved_vs_fixed_free_prior,16,371.25,367.625,374.375
+0.05,bits_saved_vs_random_dictionary,16,397.6354166666667,393.45833333333337,401.5208333333333
+0.05,excess_bits_vs_oracle,16,0.0,0.0,0.0
+0.05,dictionary_precision,16,1.0,1.0,1.0
+0.05,heldout_program_rate,16,0.9921875,0.9765625,1.0
+0.2,bits_saved_vs_raw,16,288.875,253.125,322.12812499999995
+0.2,bits_saved_vs_fixed_free_prior,16,288.875,253.371875,322.25
+0.2,bits_saved_vs_random_dictionary,16,317.375,280.90546875,350.66692708333335
+0.2,excess_bits_vs_oracle,16,40.25,11.5,70.5
+0.2,dictionary_precision,16,0.921875,0.859375,0.96875
+0.2,heldout_program_rate,16,0.703125,0.5859375,0.8125

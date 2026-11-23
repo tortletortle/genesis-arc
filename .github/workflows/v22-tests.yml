@@ -1,0 +1,35 @@
+name: Genesis ARC V2.2
+
+on:
+  push:
+    paths:
+      - "versions/v2.2/**"
+      - ".github/workflows/v22-tests.yml"
+  pull_request:
+    paths:
+      - "versions/v2.2/**"
+      - ".github/workflows/v22-tests.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r versions/v2.2/requirements.txt
+      - name: Run self-test
+        working-directory: versions/v2.2
+        run: python -c "import experiment; experiment.selftest()"
+      - name: Run unit tests
+        working-directory: versions/v2.2
+        run: python -m unittest discover -s tests -v
+      - name: Run smoke benchmark
+        working-directory: versions/v2.2
+        run: |
+          python experiment.py --seeds 2 --noises .05 .2 --out /tmp/v22-smoke
+          python analyze.py /tmp/v22-smoke

@@ -1,0 +1,5 @@
+,map_accuracy,map_accuracy,dictionary_size,dictionary_size,dictionary_precision,dictionary_precision,dictionary_recall,dictionary_recall,program_rate,program_rate,roundtrip_rate,roundtrip_rate,dynamic_saving_vs_raw_pct,dynamic_saving_vs_raw_pct,dynamic_vs_fixed_free_prior_pct,dynamic_vs_fixed_free_prior_pct,dynamic_vs_fixed_charged_pct,dynamic_vs_fixed_charged_pct,heldout_map_accuracy,heldout_map_accuracy,heldout_program_rate,heldout_program_rate
+,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+noise,,,,,,,,,,,,,,,,,,,,,,
+0.05,0.9910714285714286,0.01597191412499845,4.0,0.0,1.0,0.0,1.0,0.0,0.8482142857142857,0.015971914124998498,1.0,0.0,33.203125,0.6600503420812913,33.16572152509652,0.6547230929731225,50.23695179654789,0.48615054916306116,0.9921875,0.03125,0.9921875,0.03125
+0.2,0.890625,0.05450574144381617,4.0,0.0,0.921875,0.11967838846954229,0.921875,0.11967838846954229,0.6741071428571428,0.1575076933657139,1.0,0.0,25.792410714285715,6.626249320658242,25.792410714285715,6.626249320658242,44.739029255319146,4.9344409834689005,0.8828125,0.11608859763129194,0.703125,0.2366211810750114
