@@ -1,0 +1,5 @@
+,dictionary_size,dictionary_size,hidden_primitive_recall,hidden_primitive_recall,visible_anchor_recall,visible_anchor_recall,hidden_fourth_selected,hidden_fourth_selected,heldout_program_rate,heldout_program_rate,heldout_roundtrip_rate,heldout_roundtrip_rate,heldout_map_accuracy,heldout_map_accuracy
+,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+noise,,,,,,,,,,,,,,
+0.05,5.125,1.3601470508735445,0.515625,0.17001838135919303,0.6875,0.22669117514559073,0.0,0.0,0.22916666666666666,0.25730080393132027,1.0,0.0,1.0,0.0
+0.2,4.9375,1.3400870618483463,0.453125,0.16377703339194621,0.6041666666666666,0.21836937785592825,0.0,0.0,0.14583333333333331,0.19124349420065004,1.0,0.0,0.8854166666666666,0.15774745405000762
