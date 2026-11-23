@@ -1,0 +1,50 @@
+{
+  "seeds": 8,
+  "rounds": 6,
+  "noise": 0.2,
+  "offset": 50000,
+  "methods": {
+    "raw_6": [
+      "raw",
+      240
+    ],
+    "raw_12": [
+      "raw",
+      480
+    ],
+    "raw_24": [
+      "raw",
+      960
+    ],
+    "raw_48": [
+      "raw",
+      1920
+    ],
+    "program_480": [
+      "program",
+      480
+    ],
+    "delta_480": [
+      "delta",
+      480
+    ],
+    "program_960": [
+      "program",
+      960
+    ],
+    "delta_960": [
+      "delta",
+      960
+    ]
+  },
+  "metadata_bits_per_skill": 16,
+  "raw_map_bits": 24,
+  "primitive_bits": 4,
+  "program_length_bits": 2,
+  "delta_pointer_bits": "ceil(log2(number_of_skills))",
+  "query_budget_per_environment": 32,
+  "offsets": [
+    50000,
+    51000
+  ]
+}
