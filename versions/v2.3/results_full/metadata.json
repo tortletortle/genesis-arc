@@ -1,0 +1,15 @@
+{
+  "seeds": 256,
+  "noises": [0.0, 0.05, 0.2],
+  "state_count": 8,
+  "latent_operators_per_factorization_trial": 4,
+  "pairwise_relations_per_trial": 12,
+  "active_candidate_count": 4,
+  "active_discovery_queries": 6,
+  "active_validation_inputs": 4,
+  "active_verification_repeats_per_input": 3,
+  "active_confidence_threshold": 0.995,
+  "open_set_null_model": "uniform output per query; illustrative baseline, not a calibrated universal novelty detector",
+  "factorization_assumption": "complete directed pairwise composites C_ij = P_j o inverse(P_i)",
+  "caveat": "finite permutation-map identifiability and active-query benchmark; no general-intelligence claim"
+}
