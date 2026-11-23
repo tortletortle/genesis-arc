@@ -1,0 +1,17 @@
+{
+  "old_cost_bits": 168,
+  "addition_gain_bits": 32,
+  "candidate_accepted": true,
+  "new_cost_bits": 136,
+  "old_record_still_decodes_before_migration": true,
+  "second_old_record_still_decodes_before_migration": true,
+  "atomic_migration_succeeded": true,
+  "record_versions_after_migration": [1],
+  "audit": {
+    "record_count": 2,
+    "version_count": 2,
+    "active_version": 1,
+    "roundtrip_failures": [],
+    "roundtrip_rate": 1.0
+  }
+}
