@@ -1,39 +1,37 @@
 # Genesis ARC
 
-> Private 开发仓 · V1.9 可运行源码已迁入（原始实验数据及完整 Git 历史仍待同步）
+> Private research repository. Each version keeps its own source, experiments, and explicit validation limits.
 
-## 研究目标
+## Research direction
 
-研究数字生命在受控离散环境中的自主规律发现、技能迁移、有限记忆及连续学习。当前为研究原型，不是通用智能或完整生态种群系统。
+Study skill acquisition, compositional generalization, memory, and continual adaptation in controlled synthetic environments. These research prototypes are not a claim of general intelligence or a complete digital-life ecosystem.
 
-## 当前完成度
+## Current research branches
 
-- V1.9：运行入口 run.py、V1.7 算法依赖 v17_baseline.py、统计脚本 analyze.py、requirements.txt、README 和研究报告已迁入。
-- V1.8：研究报告已迁入；其完整源码和原始数据尚待迁入。
-- 以上七个文件已逐一核对，Git blob SHA 与本地原件一致。
-- 本地原件自测及两组单种子冒烟实验通过（10%/20% 噪声，各72条检查点、24条记忆记录），统计脚本运行成功；尚未执行远程 CI。
-- 本地原始 V1.8 / V1.9 提交、标签及历史实验数据保存在 genesis-arc-history.bundle；远程此次采用新提交导入，尚未迁入原始 Git 历史及完整 CSV。不要将其视为完整迁移。
+- **V1.9** — continual skill retrieval and adaptive compute baseline.
+- **V2.0** — evidence-based skill consolidation and frozen recall probes. Draft PR #1.
+- **V2.1** — lossless raw/program/delta memory compression. Draft PR #2.
+- **V2.2** — self-organizing dictionary induction from observed skill maps, pair look-ahead, held-out composition tests, and hidden-primitive limitation tests. Draft PR #3.
 
-## 运行
+V2.0–V2.2 are staged as incremental research branches. V2.2 is not merged into `main`, and it is not integrated with the V1.5.1 evolutionary-population/ecosystem line.
+
+## V2.2 quick start
 
 ```bash
-cd versions/v1.9
+cd versions/v2.2
 pip install -r requirements.txt
-python -c 'import run; run.selftest()'
-python run.py --seeds 8 --rounds 6 --out results
-python run.py --seeds 8 --rounds 6 --noise .2 --offset 10000 --out robustness
-python analyze.py
+python -c 'import experiment; experiment.selftest()'
+python -m unittest discover -s tests -v
+python experiment.py --seeds 16 --noises .05 .2 --out results
+python analyze.py results
 ```
 
-## 研究报告
+See [V2.2 report](versions/v2.2/V2.2_REPORT.md) for the experiment design, results, and limitations.
 
-- [V1.8](versions/v1.8/V1.8_REPORT.md)
-- [V1.9](versions/v1.9/V1.9_REPORT.md)
+## Engineering rules
 
-## 工程约定
-
-1. 一个独立项目对应一个 GitHub 仓库。
-2. 开发阶段默认 Private。
-3. 保留原始 Git 历史及版本标签；远程已有独立初始化提交，不允许直接强制覆盖。
-4. 保留实验数据、测试报告和变更记录；不得将未验收功能标记为完成。
-5. 尚未选择开源许可证。
+1. Keep versioned source and baselines immutable once used as an experimental reference.
+2. Preserve raw results, test outputs, and configuration metadata.
+3. Separate measured facts, inferences, and unresolved questions.
+4. Do not label a feature complete without reproducible tests.
+5. No open-source license has been selected yet.
