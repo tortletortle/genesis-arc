@@ -15,22 +15,22 @@ V2.2 研究一个有限状态环境中的问题：系统能否仅从已经观测
 
 ## 复现
 
-\`\`\`bash
+```bash
 pip install -r requirements.txt
 python -c 'import experiment; experiment.selftest()'
 python -m unittest discover -s tests -v
 python experiment.py --seeds 16 --noises .05 .2 --out results
 python analyze.py results
-\`\`\`
+```
 
 ## 目录
 
-- \`dictionary.py\`：映射组合、程序枚举、字典选择、编码成本及无损解码。
-- \`experiment.py\`：合成数据生成、噪声观测、主实验和隐藏原语留出实验。
-- \`analyze.py\`：按随机种子汇总、配对 bootstrap 区间、顺序效应分析。
-- \`v17_baseline.py\`：固定 DSL 对照所用的 V1.7 原语表；V2.2 核心算法不调用 V1.9 学习器。
-- \`tests/\`：单元测试。
-- \`results_full/\`：本次16种子/噪声组实验的原始 CSV、统计表和配置。
+- `dictionary.py`：映射组合、程序枚举、字典选择、编码成本及无损解码。
+- `experiment.py`：合成数据生成、噪声观测、主实验和隐藏原语留出实验。
+- `analyze.py`：按随机种子汇总、配对 bootstrap 区间、顺序效应分析。
+- `v17_baseline.py`：固定 DSL 对照所用的 V1.7 原语表；V2.2 核心算法不调用 V1.9 学习器。
+- `tests/`：单元测试。
+- `results_full/`：本次16种子/噪声组实验的原始 CSV、统计表和配置。
 
 ## 重要限制
 
